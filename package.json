@@ -1,0 +1,34 @@
+{
+  "name": "isomorphic-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --harmony ./babel.server",
+    "build": "node ./node_modules/webpack/bin/webpack.js --verbose --colors --display-error-details --config webpack.client.js",
+    "watch-client": "node ./node_modules/webpack/bin/webpack.js --verbose --colors --display-error-details --config webpack.client-watch.js && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.client-watch.js",
+    "watch": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run watch-client\" \"npm run start\""
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "concurrently": "^3.4.0",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.0",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "piping": "^1.0.0-rc.4",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
