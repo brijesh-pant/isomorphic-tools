@@ -1,7 +1,3 @@
-// import path from "path";
-// import express from "express";
-// import * as config from "../webpack.production.config.js";
-
 var path = require('path');
 var express = require('express');
 
