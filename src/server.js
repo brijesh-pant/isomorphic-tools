@@ -16,7 +16,7 @@ const app           = express(),
 
 app.set("port", process.env.PORT || DEFAULT_PORT);
 
-// app.use('/public', express.static(DIST_DIR));
+app.use(express.static('static'))
 
 const getMarkup = (webserver) => {
     const HTML = `
@@ -25,7 +25,7 @@ const getMarkup = (webserver) => {
             <head>
             </head>
             <body>
-                <script src="${webserver}/dist/client.js"></script>
+                <script src="dist/client.js"></script>
             </body>
         </html>`;
     return HTML;
