@@ -1,5 +1,6 @@
 var path = require('path');
 var express = require('express');
+import { match, RouterContext } from 'react-router'
 
 const hostname = process.env.HOSTNAME || "localhost";
 
@@ -25,7 +26,8 @@ const getMarkup = (webserver) => {
             <head>
             </head>
             <body>
-                <script src="dist/client.js"></script>
+                <div id="react-root"></div>
+                <script src="${webserver}/dist/client.js"></script>
             </body>
         </html>`;
     return HTML;
