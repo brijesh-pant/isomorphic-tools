@@ -34,8 +34,6 @@ export function initialize() {
   //   ? createMemoryHistory(currentLocation)
   //   : browserHistory;
 
-  // define app routes
-
     return ({
        provider: <Router history={browserHistory} routes={routes}></Router>
     });
