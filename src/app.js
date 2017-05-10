@@ -21,21 +21,20 @@ class App extends React.Component {
   }
 }
 
+export const routes = (
+  <Route path="/" component={App}>
+    <IndexRoute component={Main} />
+    <Route path="login" component={SignIn} />
+  </Route>
+);
+
 export function initialize() {
 
   // let history = (isServer)
   //   ? createMemoryHistory(currentLocation)
   //   : browserHistory;
 
-  // console.log('dlklf')
-
   // define app routes
-  const routes = (
-    <Route path="/" component={App}>
-      <IndexRoute component={Main} />
-      <Route path="login" component={SignIn} />
-    </Route>
-  );
 
     return ({
        provider: <Router history={browserHistory} routes={routes}></Router>
